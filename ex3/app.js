@@ -1,3 +1,15 @@
+let hand = ["グー","チョキ","パー"];
+let user_hand_num = getHand();
+
+if(user_hand_num != -1){
+  let js_hand_num = Math.floor( Math.random() * 3 );
+  let judge = winLose(user_hand_num, js_hand_num);
+
+  alert('あなたの選んだ手は' + hand[user_hand_num] + 'です。\nJavaScriptの選んだ手は' + hand[js_hand_num] + 'です。\n結果は' + judge + 'です。');
+}else{
+  alert("またチャレンジしてね！");
+}
+
 function getHand(){
   while(true){
     let user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
@@ -24,16 +36,3 @@ function winLose(user, js){
   }
   return winLoseStr;
 }
-
-let hand = ["グー","チョキ","パー"];
-let user_hand_num = getHand();
-
-if(user_hand_num != -1){
-  let js_hand_num = Math.floor( Math.random() * 3 );
-  let judge = winLose(user_hand_num, js_hand_num);
-
-  alert('あなたの選んだ手は' + hand[user_hand_num] + 'です。\nJavaScriptの選んだ手は' + hand[js_hand_num] + 'です。\n結果は' + judge + 'です。');
-}else{
-  alert("またチャレンジしてね！");
-}
-
